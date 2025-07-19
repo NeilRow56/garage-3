@@ -1,0 +1,4 @@
+ALTER TABLE "organization_user_settings" ALTER COLUMN "userId" SET NOT NULL;--> statement-breakpoint
+ALTER TABLE "organization_user_settings" ALTER COLUMN "organizationId" SET NOT NULL;--> statement-breakpoint
+ALTER TABLE "organization_user_settings" ADD CONSTRAINT "organization_user_settings_userId_users_id_fk" FOREIGN KEY ("userId") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "organization_user_settings" ADD CONSTRAINT "organization_user_settings_organizationId_organizations_id_fk" FOREIGN KEY ("organizationId") REFERENCES "public"."organizations"("id") ON DELETE no action ON UPDATE no action;
