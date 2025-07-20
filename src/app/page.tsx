@@ -1,9 +1,12 @@
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className='mx-auto flex h-dvh max-w-5xl flex-col justify-center text-center'>
-      <div className='sm: mx-auto flex w-4/5 max-w-96 flex-col gap-6 rounded-xl bg-black/90 p-12 text-2xl text-white'>
+    <main className='bg-background mx-auto flex h-dvh max-w-5xl flex-col text-center'>
+      <Header />
+      <div className='sm: mx-auto mt-24 flex w-4/5 max-w-96 flex-col gap-6 rounded-xl bg-black/90 p-12 text-2xl text-white'>
         <h1 className='text-4xl font-bold'>
           Dan&apos;s Computer
           <br />
@@ -24,6 +27,9 @@ export default function Home() {
           <span>Hi There!</span>
         </div>
         <div className='animate-fadeIn'>...Modal Container</div>
+      </div>
+      <div className='absolute bottom-0 left-0'>
+        <Footer />
       </div>
     </main>
   )
